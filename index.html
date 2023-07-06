@@ -556,31 +556,35 @@
             </li>
           </ul>
         </div>
-        <div class="footer-subscribe-area">
-          <label class="footer-label">
-            <span class="footer-label-text">Subscribe</span>
-            <input class="footer-input" type="email" placeholder="E-mail"
-          /></label>
-          <button class="footer-button pointer-btn" type="submit">
-            Subscribe<svg class="footer-sub-icon" width="24" height="24">
-              <use href="./images/icons.svg#subscribe-icon"></use>
-            </svg>
-          </button>
+        <div class="footer-sub-wrap">
+          <p class="footer-sub-text">Subscribe</p>
+          <form class="footer-form">
+            <label
+              ><input
+                class="footer-input"
+                type="email"
+                name="footer_email"
+                placeholder="E-mail"
+            /></label>
+            <button class="footer-sub-btn" type="submit">
+              Subscribe
+              <svg class="footer-sub-icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe-icon"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
     <!-- Modal window -->
-    <!-- is-hidden modal class -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="8" height="8">
             <use href="./images/icons.svg#x-close"></use>
           </svg>
         </button>
-        <strong class="modal-text"
-          >Leave your contacts and we will call you back</strong
-        >
+        <p class="modal-text">Leave your contacts and we will call you back</p>
 
         <form class="modal-form">
           <label class="modal-form-field">
@@ -604,16 +608,27 @@
               <use href="./images/icons.svg#email"></use>
             </svg>
           </label>
-          <label class="modal-form-field">
+          <label class="modal-form-field modal-textarea-label">
             <span class="modal-form-label">Comment</span>
             <textarea
               class="modal-textarea"
               name="user_comment"
-              cols=""
-              rows=""
+              rows="7"
               placeholder="Text input"
             ></textarea>
           </label>
+          <label class="modal-checkbox-label">
+            <input class="modal-checkbox visually-hidden" type="checkbox" />
+            <span class="modal-custom-checkbox"
+              ><svg class="modal-custom-checkbox-icon" width="10" height="8">
+                <use href="./images/icons.svg#custom-checkbox-icon"></use></svg
+            ></span>
+            <span class="checkbox-text"
+              >I accept the terms and conditions of the
+              <a href="#" class="privacy-link link">Privacy Policy</a></span
+            >
+          </label>
+          <button class="modal-send-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
